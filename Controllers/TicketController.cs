@@ -23,12 +23,33 @@ namespace tickets.Controllers
         string input = Console.ReadLine();
         switch (input)
         {
+          case "quit":
           case "q":
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
             Environment.Exit(0);
             break;
+          case "new":
           case "n":
             System.Console.WriteLine("Ticket name:");
+            string newName = Console.ReadLine();
+            Console.WriteLine("Ticket description:");
+            string newDesc = Console.ReadLine();
+            _ticketService.newTicket(newName, newDesc);
+            System.Console.WriteLine("Press any key to continue");
+            _ticketService.Write();
+            break;
+          case "d":
+          case "delete":
+            System.Console.WriteLine("Delete which ticket?");
+            string index = Console.ReadLine();
+            if (int.TryParse(index, out int indexInt))
+            {
+              _ticketService.Delete(indexInt);
+            }
+            Console.Clear();
+            _ticketService.Write();
+            Draw();
             break;
           default:
             if (int.TryParse(input, out int inputInt))
@@ -39,7 +60,9 @@ namespace tickets.Controllers
             }
             else
             {
-              System.Console.WriteLine("YOU ARE WRONG");
+              Console.Clear();
+              _ticketService.Write();
+              Draw();
             }
             break;
         }

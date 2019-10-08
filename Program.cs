@@ -7,6 +7,7 @@ namespace tickets
   {
     static void Main(string[] args)
     {
+      Console.ForegroundColor = ConsoleColor.Blue;
       Console.Clear();
       new TicketController().UserInput();
     }

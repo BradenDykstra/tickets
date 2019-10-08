@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 using tickets.Models;
 
 namespace tickets.Services
@@ -9,11 +10,10 @@ namespace tickets.Services
 
     public List<Ticket> allTickets = new List<Ticket>();
 
-    Ticket t1 = new Ticket("Test", "ssssssssssssssssssssssssssssssssssssssssssssssssssssss");
 
     public void Write()
     {
-      allTickets.Add(t1);
+      messages.Clear();
       for (int i = 0; i < allTickets.Count; i++)
       {
         string message = allTickets[i].Name;
@@ -33,6 +33,25 @@ namespace tickets.Services
         messages.Add($"{allTickets[index - 1].Name}");
         messages.Add($"{allTickets[index - 1].Desc}");
       }
+    }
+
+    public void Delete(int index)
+    {
+      messages.Clear();
+      if (index > allTickets.Count || index < 1)
+      {
+        messages.Add("YOU ARE WRONG");
+      }
+      else
+      {
+        Ticket i = allTickets[index - 1];
+        allTickets.Remove(i);
+      }
+    }
+
+    public void newTicket(string name, string desc)
+    {
+      allTickets.Add(new Ticket(name, desc));
     }
 
     public TicketService()
