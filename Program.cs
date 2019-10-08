@@ -1,12 +1,17 @@
 ﻿using System;
+using tickets.Controllers;
 
 namespace tickets
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+      Console.Clear();
+      while (true)
+      {
+        new TicketController().UserInput();
+      }
     }
+  }
 }

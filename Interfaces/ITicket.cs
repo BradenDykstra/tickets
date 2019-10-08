@@ -2,7 +2,8 @@ namespace tickets.Interfaces
 {
   public interface ITicket
   {
-    string name { get; set; }
-    string desc { get; set; }
+    string Name { get; set; }
+    string Desc { get; set; }
+    string getTemplate();
   }
 }

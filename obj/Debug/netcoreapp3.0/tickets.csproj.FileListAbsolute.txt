@@ -1,0 +1,11 @@
+C:\source\codeworks\tickets\bin\Debug\netcoreapp3.0\tickets.exe
+C:\source\codeworks\tickets\bin\Debug\netcoreapp3.0\tickets.deps.json
+C:\source\codeworks\tickets\bin\Debug\netcoreapp3.0\tickets.runtimeconfig.json
+C:\source\codeworks\tickets\bin\Debug\netcoreapp3.0\tickets.runtimeconfig.dev.json
+C:\source\codeworks\tickets\bin\Debug\netcoreapp3.0\tickets.dll
+C:\source\codeworks\tickets\bin\Debug\netcoreapp3.0\tickets.pdb
+C:\source\codeworks\tickets\obj\Debug\netcoreapp3.0\tickets.csprojAssemblyReference.cache
+C:\source\codeworks\tickets\obj\Debug\netcoreapp3.0\tickets.AssemblyInfoInputs.cache
+C:\source\codeworks\tickets\obj\Debug\netcoreapp3.0\tickets.AssemblyInfo.cs
+C:\source\codeworks\tickets\obj\Debug\netcoreapp3.0\tickets.dll
+C:\source\codeworks\tickets\obj\Debug\netcoreapp3.0\tickets.pdb
