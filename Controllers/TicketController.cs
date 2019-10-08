@@ -36,8 +36,9 @@ namespace tickets.Controllers
             Console.WriteLine("Ticket description:");
             string newDesc = Console.ReadLine();
             _ticketService.newTicket(newName, newDesc);
-            System.Console.WriteLine("Press any key to continue");
+            Console.Clear();
             _ticketService.Write();
+            Draw();
             break;
           case "d":
           case "delete":
