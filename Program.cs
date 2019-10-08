@@ -8,10 +8,7 @@ namespace tickets
     static void Main(string[] args)
     {
       Console.Clear();
-      while (true)
-      {
-        new TicketController().UserInput();
-      }
+      new TicketController().UserInput();
     }
   }
 }

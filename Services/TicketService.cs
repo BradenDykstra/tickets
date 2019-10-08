@@ -21,6 +21,20 @@ namespace tickets.Services
       }
     }
 
+    public void Write(int index)
+    {
+      messages.Clear();
+      if (index > allTickets.Count || index < 1)
+      {
+        messages.Add("YOU ARE WRONG");
+      }
+      else
+      {
+        messages.Add($"{allTickets[index - 1].Name}");
+        messages.Add($"{allTickets[index - 1].Desc}");
+      }
+    }
+
     public TicketService()
     {
       messages = new List<string>();
